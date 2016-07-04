@@ -15,7 +15,6 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/public/index.html'));
 })
 
-app.get('/:query', function(req, res) {
-
-	res.send('this');
+app.get('/http(s)?://*', function(req, res) {
+	res.send(req.params[1]);
 });
