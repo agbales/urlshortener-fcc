@@ -1,0 +1,22 @@
+{
+  "name": "urlshortner",
+  "version": "1.0.0",
+  "description": "URL Shortener",
+  "main": "urlshortener.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agbales/url-shortener.git"
+  },
+  "author": "Andrew Bales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agbales/url-shortener/issues"
+  },
+  "homepage": "https://github.com/agbales/url-shortener#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
