@@ -6,12 +6,11 @@ var url = 'mongodb://localhost:27017/urlshortener';
 var app = express();
 var port = process.env.PORT || 8080;
 
-
 app.listen(port,  function () {
 	console.log('Node.js listening on port ' + port + '...');
 	process.on('uncaughtException', function (err) {
 	    console.log(err);
-	}); 
+	});
 });
 
 app.get('/', function(req, res) {
@@ -33,8 +32,7 @@ app.get('/urls', function(req, res){
 
 app.get('/:query', function(req, res) {
     var query = req.params.query
-    // if collection ID ends in query, Redirect.
-
+    
     MongoClient.connect(url, function(err, db) {
         if (err) throw err
         console.log('Connection established to', url);
@@ -56,8 +54,8 @@ app.get('/http(s)?://*', function(req, res) {
     MongoClient.connect(url, function (err, db) {
         if (err) throw err
         console.log('Connection established to', url);
-    
         var shortUrl;
+        
         db.collection('urls').count()
                             .then(function(num) {
                                 if (err) throw err;
@@ -73,14 +71,11 @@ app.get('/http(s)?://*', function(req, res) {
             var collection = db.collection('urls');
             collection.insert(listing, function(err, data) {
                 if (err) throw err
-                console.log('INSERTED' + data);
+                res.send(listing);
                 db.close();
             });
         }
-        
-        res.redirect('/urls');
     });
-
 });   
         
 
