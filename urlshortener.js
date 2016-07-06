@@ -42,9 +42,10 @@ app.get('/:query', function(req, res) {
         }).toArray(function(err, docs) {
             if (err) throw err
             res.redirect(docs[0].original)
-            db.close()
+            db.close();
         })
-    })
+    });
+    
 });
 
 app.get('/http(s)?://*', function(req, res) {
@@ -71,7 +72,7 @@ app.get('/http(s)?://*', function(req, res) {
             var collection = db.collection('urls');
             collection.insert(listing, function(err, data) {
                 if (err) throw err
-                res.send(listing);
+                res.send('https://url-shortner-agbales.c9users.io/' + listing.short);
                 db.close();
             });
         }
