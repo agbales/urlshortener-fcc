@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
-const url = 'mongodb://agbales:mlaber1@dbh36.mlab.com:27367/heroku_0l5llftx';
+const url = 'mongodb://localhost:27017/urlshortener';
 const app = express();
 const port = process.env.PORT || 8080;
 
