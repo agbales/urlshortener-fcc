@@ -11,7 +11,7 @@
     "url": "git+https://github.com/agbales/url-shortener.git"
   },
   "scripts": {
-  "start": "node server.js"
+  "start": "node urlshortener.js"
   },
   "author": "Andrew Bales",
   "license": "ISC",
