@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const dotenv = require('dotenv').load();
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
 var url = process.env.MONGODB_URI;
