@@ -1,10 +1,10 @@
-var express = require('express');
-var path = require('path');
-var mongodb = require('mongodb');
-var MongoClient = mongodb.MongoClient;
-var url = 'mongodb://localhost:27017/urlshortener';
-var app = express();
-var port = process.env.PORT || 8080;
+const express = require('express');
+const path = require('path');
+const mongodb = require('mongodb');
+const MongoClient = mongodb.MongoClient;
+const url = 'mongodb://agbales:mlaber1@dbh36.mlab.com:27367/heroku_0l5llftx';
+const app = express();
+const port = process.env.PORT || 8080;
 
 app.listen(port,  function () {
 	console.log('Node.js listening on port ' + port + '...');
