@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/agbales/url-shortener.git"
   },
+  "scripts": {
+  "start": "node server.js"
+  },
   "author": "Andrew Bales",
   "license": "ISC",
   "bugs": {
