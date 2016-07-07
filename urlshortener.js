@@ -29,7 +29,7 @@ app.get('/urls', function(req, res){
       if (err) throw err
       console.log("connected to mongo")
       var collection = db.collection('urls');
-      collection.find({}).toArray(function(err, result) {
+      collection.find({}, { _id: 0 }).toArray(function(err, result) {
          if (err) throw err 
          res.send(result);
         db.close()
@@ -69,7 +69,7 @@ app.get('/http(s)?://*', function(req, res) {
                                 if (err) throw err;
                                 listing = {
                                     original : fullUrl,
-                                    short: num.toString()
+                                    short: 'https://url-shortner-agbales.c9users.io/' + num.toString()
                                 }
                                 console.log(listing);
                                 insertListing(err, listing);
@@ -79,7 +79,7 @@ app.get('/http(s)?://*', function(req, res) {
             var collection = db.collection('urls');
             collection.insert(listing, function(err, data) {
                 if (err) throw err
-                res.send('https://url-shortner-agbales.c9users.io/' + listing.short);
+                res.send(listing);
                 db.close();
             });
         }
