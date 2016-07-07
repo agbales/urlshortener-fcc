@@ -3,9 +3,14 @@ const path = require('path');
 const dotenv = require('dotenv').load();
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
-const url = process.env.MONGODB_URI;
+var url = process.env.MONGODB_URI;
 const app = express();
 const port = process.env.PORT || 8080;
+
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+    url = 'mongodb://localhost:27017/urlshortener';
+}
 
 console.log(url);
 
