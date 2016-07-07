@@ -7,6 +7,8 @@ const url = process.env.MONGODB_URI;
 const app = express();
 const port = process.env.PORT || 8080;
 
+console.log(url);
+
 app.listen(port,  function () {
 	console.log('Node.js listening on port ' + port + '...');
 	process.on('uncaughtException', function (err) {
