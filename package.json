@@ -1,6 +1,9 @@
 {
   "name": "urlshortner",
   "version": "1.0.0",
+  "engines": {
+    "npm": "3.10.5"
+  },
   "description": "URL Shortener",
   "main": "urlshortener.js",
   "scripts": {
@@ -16,9 +19,9 @@
   "author": "Andrew Bales",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/agbales/url-shortener/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/agbales/url-shortener#readme",
+  "homepage": "https://github.com/agbales/urlshortener-fcc",
   "dependencies": {
     "express": "^4.14.0",
     "mongodb": "^2.1.18"
